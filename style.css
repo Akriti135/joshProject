@@ -1,0 +1,824 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+/* .open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+
+
+/* HEADER */
+.header {
+  display: flex;
+  color: #F2F2F2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 8%;
+  background-color: #1AC073;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #F2F2F2;
+  font-weight: 500;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  /* Change if needed */
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color: #ffd700;
+  /* Optional hover effect */
+}
+
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1AC073;
+  /* from screenshot */
+  height: 100vh;
+  padding: 3rem 8%;
+}
+
+.hero-text {
+  max-width: 50%;
+  color: white;
+  padding: 50px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  display: flex;
+  max-width: 398px;
+  height: 58px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px 0 0 6px;
+}
+
+.search-box button {
+  color: #F2F2F2;
+  background-color: #F3BA00;
+  /* yellow from screenshot */
+  border: none;
+  padding: 0 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* HOME KITCHEN SECTION */
+/* Section Styling */
+.home-kitchen {
+  padding: 40px;
+
+  background: #F7F8FA;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 30px;
+
+  text-align: left;
+  color: #222;
+}
+
+/* Grid Layout */
+.food-grid {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Food Card */
+.food-item {
+  background: #F7F8FA;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.food-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Section */
+.food-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-item:hover .food-image img {
+  transform: scale(1.08);
+}
+
+/* Discount Badge */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ffcc00;
+  color: #000;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Food Info */
+.food-info {
+  padding: 16px 18px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #27ae60;
+}
+
+/* Details Row */
+.food-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px 16px;
+  margin-top: auto;
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.rating i {
+  color: #000;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* Delivery Time */
+.time {
+  background: #f2f2f2;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Add Button */
+.add-btn {
+  background: #ffcc00;
+  padding: 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #ffb400;
+}
+
+.add-btn i {
+  color: #000;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .food-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* POPULAR ITEMS SECTION - CAROUSEL */
+
+
+/* Header */
+.section-titles {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2rem;
+}
+
+/* Carousel Navigation */
+.nav-button {
+  background: #e6f5e9;
+  border: 2px solid #c9e7d1;
+  color: green;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+.qty-selector {
+  display: flex;
+  align-items: center;
+
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.qty-selector button {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: #ffeb3b;
+  color: #000;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.qty-selector button:hover {
+  background: #ffb400;
+}
+
+.qty-selector span {
+  padding: 0 12px;
+  background: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 20px 0;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: calc(280px * 3 + 2 * 24px);
+  /* 3 cards + 2 gaps */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 24px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.food-card {
+  flex: 0 0 280px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffcc00;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.card-info {
+  padding: 1rem;
+  text-align: left;
+}
+
+.title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.rating {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.time {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+
+.request-btn {
+  display: block;
+  margin: 2rem auto;
+  /* top-bottom margin 2rem, left-right auto for center */
+  background: #00c853;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  /* position ko relative ya static rakhna */
+  left: auto;
+  /* agar koi left value ho toh remove karo */
+  top: auto;
+  /* agar koi top value ho toh remove karo */
+}
+
+
+.request-btn:hover {
+  background: #00b34a;
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Hide modal by default */
+.hidden {
+  display: none;
+}
+
+/* Modal Box */
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Form styling */
+#requestForm label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+#requestForm input,
+#requestForm textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  margin-top: 1.5rem;
+  background-color: #00c853;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #00b34a;
+}
+
+
+
+/* video section */
+.video-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.text-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.text-container p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+/* Adjusted green background for bottom half, now starts lower */
+.video-section {
+  position: relative;
+  background: linear-gradient(to bottom, #ffffff 60%, #d1fae5 60%);
+  /* Green starts lower */
+  padding: 10px 0;
+}
+
+/* Video container styling */
+.video-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
+
+/* Play Button styling */
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #22c55e;
+  /* Green color for the play icon */
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  border: 3px solid #22c55e;
+  /* Green border around the button */
+}
+
+.play-button span {
+  margin-left: 5px;
+}
+
+.play-button:hover {
+  background-color: #16a34a;
+  /* Darker green when hovered */
+}
+
+/* Adding smooth animation for button visibility */
+.play-button.hidden {
+  display: none;
+}
+
+
+
+
+
+
+/* Contact Section */
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #fff;
+  position: relative;
+  min-height: 400px;
+  /* Minimum height for content */
+}
+
+/* Add green background to the bottom half */
+.contact-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #d1fae5;
+  /* Light green */
+  border-radius: 0 0 10px 10px;
+  z-index: -1;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  width: 50%;
+}
+
+
+h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-forms {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.contact-form button {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #16a34a;
+}
+
+/* Image Container */
+.image-container {
+  width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer Section */
+/* Footer Styles */
+footer {
+  background-color: #22c55e;
+  /* Green background */
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer p {
+  color: #fff;
+  font-size: 25px;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+
+
+footer .footer-nav {
+  display: flex;
+  gap: 18px;
+
+}
+
+footer .footer-nav a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* or center if needed */
+}
+
+footer .footer-nav a:hover {
+  text-decoration: underline;
+}
+
+footer .social-links {
+  display: flex;
+  gap: 18px;
+}
+
+footer .social-links a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+.fab {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.fab:hover {
+  color: #16a34a;
+  /* Darker green on hover */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .footer-nav {
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  footer .social-links {
+    margin-top: 10px;
+  }
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 25px;
+  color: white;
+}
+
+.footer-line {
+  width: 60px;
+  /* adjust size as per your design */
+  height: 2px;
+  background-color: white;
+  margin-top: 6px;
+  align-self: center;
+}
